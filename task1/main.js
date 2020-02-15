@@ -1,10 +1,10 @@
 function init() {
-  let div = document.getElementById('holder');
-  let children = div.childNodes;
-  console.log(children);
-  for (let i = 0; i < children.length; i++) {
-    children[i].className = "element";
-  }
+  const div = document.getElementById('holder');
+  const children = div.childNodes;
+
+  children.forEach((index) => {
+    index.className = "element";
+  });
 }
 
 init();
