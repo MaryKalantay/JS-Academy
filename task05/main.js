@@ -8,10 +8,8 @@ function init() {
     elem.classList.add("alt");
   });
 
-  let span = "<span>" + 1  +  "</span>"
-
-  blocksAll.forEach((elem) => {
-    elem.insertAdjacentHTML("afterBegin", span);
+  blocksAll.forEach((elem, index, array) => {
+    elem.insertAdjacentHTML("afterBegin", '<span>' + index + '</span>');
   });  
 }
 
