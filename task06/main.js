@@ -4,15 +4,19 @@ function init() {
 
 	list.forEach((elem, index, array) => {
 		elem.addEventListener("click", function(){
-			alert(index,  liLen(elem));
+			let parent = elem.parentNode;
+			let childrens = parent.children;
+			console.log("первый список " + parent);
+			console.log("номер ли " + index);
+			console.log("дети первого списка " + childrens);
+			console.log("длинна первого списка " + childrens.length);
+
+			let innerList = elem.querySelectorAll("ul > li");
+			console.log("внутренний список " + innerList);
+
+			
 		});
 	});
-
-	function liLen(list) {
-		let list2 = list.querySelectorAll('li');
-		let listLen = list2.length;
-		return listLen;
-	};
 }
 
 init();
