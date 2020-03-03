@@ -12,25 +12,21 @@ function init() {
 	console.log(str2);
 	console.log(str2[1]);
 	let numberRandom = Math.floor(Math.random() * maxNumber) + 1;
-
 	str2[1] =  numberRandom;
-
 	if (numberRandom < 10) {
 		str2[1] = "0" + numberRandom;
 	} else {
 		str2[1] = numberRandom;
 	}
-
 	let imgPath = str2[0] + str2[1] + str2[2];
 	console.log(imgPath);
 	let img =  document.createElement('img');
 	let imgAtrr =  img.setAttribute("src", imgPath);
 	console.log(visual);
+	visual.innerHTML = "";
+	visual.appendChild(img);
 
-	visual.innerHTML = img;
-	document.body.appendChild(img);
-
-	return visual;
+	visual.innerHTML = html(img);
 }
 
 init();
