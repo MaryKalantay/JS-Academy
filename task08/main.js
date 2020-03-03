@@ -25,8 +25,6 @@ function init() {
 	console.log(visual);
 	visual.innerHTML = "";
 	visual.appendChild(img);
-
-	visual.innerHTML = html(img);
 }
 
 init();
