@@ -1,19 +1,33 @@
-function init() {
+let items = document.querySelectorAll('ul > li');
+let currentItem = 0;
+let play = true;
+let btn = document.getElementById('btn');
 
-	let btn = document.getElementById('btn');
-	let item = document.querySelectorAll('ul > li');
+let interval = setInterval(nextItem, 5000);
 
-	item.forEach((li, index, array) => {
-		btn.onclick = () => {
-			btn.innerHTML = "Stop";
-			li.classList = " ";	
-			console.log(li[index++]);
-			let prevSlide = li[index-1];
-			li.classList = "active";
-			prevSlide.className = "";
-			console.log(li);		
-		}
-	})
-	}
+function nextItem() {
+  items[currentItem].className = "";
+  currentItem = (currentItem + 1)%items.length;
+  items[currentItem].className = "active";
+}
 
-init();
+function stopSlide() {
+  btn.innerHTML = "STOP";
+  play = false;
+  clearInterval(interval);
+}
+
+function playSlide() {
+  btn.innerHTML = "PLAY";
+  play = true;
+  interval = setInterval(nextItem, 5000);
+}
+
+btn.onclick = function() {
+  if(play) {
+    stopSlide();
+  }
+  else {
+    playSlide();
+  }
+}
