@@ -3,7 +3,6 @@ let currentItem = 0;
 let play = true;
 let btn = document.getElementById('btn');
 
-let interval = setInterval(nextItem, 5000);
 
 function nextItem() {
   items[currentItem].className = "";
@@ -12,22 +11,22 @@ function nextItem() {
 }
 
 function stopSlide() {
-  btn.innerHTML = "STOP";
-  play = false;
+  btn.innerHTML = "PLAY";
+  play = true;
   clearInterval(interval);
 }
 
 function playSlide() {
-  btn.innerHTML = "PLAY";
-  play = true;
-  interval = setInterval(nextItem, 5000);
+  btn.innerHTML = "STOP";
+  interval = setInterval(nextItem, 1000);
+  play = false;
 }
 
 btn.onclick = function() {
   if(play) {
-    stopSlide();
+    playSlide();
   }
   else {
-    playSlide();
+    stopSlide();
   }
 }
