@@ -1,0 +1,36 @@
+#slider {
+  width: 30%;
+  float: right;
+  padding: 15px 0;
+  position: relative;
+}
+
+#sidebar {
+  background: pink;
+  position: absolute;
+  top: 0;
+}
+
+#sidebar.active {
+  position: fixed;
+  top: 0;
+}
+
+.text {
+  width: 70%;
+  float: left;
+  background: purple;
+}
+
+#content {
+  overflow: hidden;
+}
+
+#footer {
+  background: lightgray;
+}
+
+#ad {
+  height: 100px;
+  background: lightblue;
+}
