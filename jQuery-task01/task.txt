@@ -1,0 +1,4 @@
+Работа с DOM средствами jQuery
+
+При клике на <a class="button"> ставить/убирать у родителя(<div class="box">) 
+класс opened, и в этом диве на <div class="element"> поставить с помощью JS background:red

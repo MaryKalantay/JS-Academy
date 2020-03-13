@@ -1,0 +1,4 @@
+jQuery Open-Close и AccordionExpand/Collapse
+- Реализовать OpenClose, с использованием .slideUp() и .slideDown(), предусмотреть класс active на родителе.
+
+- Реализовать многоуровневый аккордеон, с использованием техники, использованной в OpenClose

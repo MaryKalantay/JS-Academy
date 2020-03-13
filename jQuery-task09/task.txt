@@ -1,0 +1,7 @@
+Fade и Slide DropdownsExpand/Collapse
+Реализовать два дропдауна с использованием .animate(). Предусмотреть класс hover на родителе
+
+- многоуровневый dropdown с fade-эффектом (анимируя css-свойство opacity)
+
+- одноуровневый dropdown с slide-эффектом (анимируя отрицательный margin-top)
+
