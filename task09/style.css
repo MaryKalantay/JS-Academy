@@ -1,0 +1,15 @@
+#gallery {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: none;
+}
+
+ul li.active {
+  display: block;
+}
