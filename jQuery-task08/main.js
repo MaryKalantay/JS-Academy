@@ -1,5 +1,7 @@
+jQuery(function() {
+	init();
+});
+
 function init() {
 
 }
-
-init();
