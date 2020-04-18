@@ -5,30 +5,33 @@ jQuery(function() {
 function init() {
 	$(document).keydown(function(e){
 		console.log(e);
-
-		let topTank = 0;
-		let  leftTank = 0;
-		let rightTank = 0;
-		let bottomTank = 0;
 		
 		if(e.keyCode == 37) {
 			tank.css('background', 'red');
-			leftTank++;
-			let leftPos = leftTank.toString() + "px";
-			console.log(leftPos);
-			tank.css('left', leftPos);
+			tank.animate({
+        left: "-=10px"
+      }, 'fast');
 		}
 
 		else if (e.keyCode == 39) {
 			tank.css('background', 'blue');
+			tank.animate({
+        left: "+=10px"
+      }, 'fast');
 		}
 
 		else if (e.keyCode == 38) {
 			tank.css('background', 'green');
+			tank.animate({
+        top: "-=10px"
+      }, 'fast');
 		}
 
 		else if (e.keyCode == 40) {
 			tank.css('background', 'brown');
+			tank.animate({
+        top: "+=10px"
+      }, 'fast');
 		}
 	});
 
@@ -39,6 +42,4 @@ function init() {
 		tank.css('top', e.pageY);
 		tank.css('transform', 'translate(-120px, 0%)')
 	});
-
-
 }
